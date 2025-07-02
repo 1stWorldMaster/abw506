@@ -65,7 +65,7 @@ def first_inference(frame):
     boxes_bottom_right = boxes[:, :2] + boxes[:, 2:] / 2
     
     boxes_xyxy = torch.cat([boxes_top_left, boxes_bottom_right], dim=1)
-    
+
     return boxes_xyxy.cpu().numpy().astype(int)
 
 def detr_model_output(frame, bbox):
@@ -184,10 +184,16 @@ img_w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 img_h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
 frame_interval = max(1, int(21/ const.fps))
+import json
+from pathlib import Path
+
+coords_file = Path("coords.json")          # or an absolute path
+
+
 
 frame_count = 0
 second = 0
-bbox = [572, 552, 1696, 981]
+bbox = json.loads(coords_file.read_text())
 total_time = 0
 last_time = 0
 calc_time = 0

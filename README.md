@@ -62,18 +62,6 @@ load the venv package
 run the main.py
 
 
-1. Check for raw package in the folder named package
-2.  if not present downlaod else continue
-3. Check if the venv is not present 
-4. If not present load it then 
-5. check for the packages if not presenet run for pip install -r requirenment.txt
-6. Check if model is present or not
-7. if model is present then load it and continue 
-8. continue with the code by running python main.py
-
-
-
-
 1. Check for downlaod package in the folder python-3.11.tar(maybe)
 2. if not present downlaod it else continue
 3. if not downloaded , download it using apt
@@ -84,3 +72,10 @@ run the main.py
 8. if not available downlaod it their
 9. run test check tell everything working fine
 10. run python main.py
+
+
+1. select rstp link
+2. select machine
+3. select person
+4. run camera or run test
+5. exit
