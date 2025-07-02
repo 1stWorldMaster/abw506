@@ -2,7 +2,7 @@ import tui
 
 menu_data = [
     "camera_ffmpeg",
-    # "camera_opencv",
+    "select_machine",
     "history",
     "test",
     "Exit",  # Leaf item – still quits immediately
@@ -22,6 +22,8 @@ while (option != "Exit"):
         import webpage
     elif option == "test":
         import test
+    elif option == "select_machine":
+        import select_machine
 
 
 
